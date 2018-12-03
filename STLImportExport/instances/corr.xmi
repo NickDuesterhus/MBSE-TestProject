@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:STLImportExport="platform:/resource/STLImportExport/model/STLImportExport.ecore">
+  <STLImportExport:VectorToVector>
+    <source href="src.xmi#/0/@facets.0/@v1"/>
+    <target href="trg.xmi#/0"/>
+  </STLImportExport:VectorToVector>
+  <STLImportExport:VectorToVector>
+    <source href="src.xmi#/0/@facets.0/@v2"/>
+    <target href="trg.xmi#/1"/>
+  </STLImportExport:VectorToVector>
+  <STLImportExport:VectorToVector>
+    <source href="src.xmi#/0/@facets.0/@v3"/>
+    <target href="trg.xmi#/2"/>
+  </STLImportExport:VectorToVector>
+  <STLImportExport:SolidToSolid>
+    <source href="src.xmi#/0"/>
+    <target href="trg.xmi#/3"/>
+  </STLImportExport:SolidToSolid>
+  <STLImportExport:FacetToFacet>
+    <source href="src.xmi#/0/@facets.0"/>
+    <target href="trg.xmi#/3/@facets.0"/>
+  </STLImportExport:FacetToFacet>
+  <STLImportExport:VectorToVector>
+    <source href="src.xmi#/1"/>
+    <target href="trg.xmi#/4"/>
+  </STLImportExport:VectorToVector>
+</xmi:XMI>

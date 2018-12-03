@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore" name="STLImportExport">
+  <src href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#/"/>
+  <trg href="platform:/resource/Metamodell/model/Metamodell.ecore#/"/>
+  <corr href="platform:/resource/STLImportExport/model/STLImportExport.ecore#/"/>
+  <rules name="FacetRule">
+    <nodes name="s" outgoingEdges="//@rules.0/@edges.0">
+      <type href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Solid"/>
+    </nodes>
+    <nodes name="facet" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0" incomingCorrsSource="//@rules.0/@nodes.4">
+      <type href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Facet"/>
+    </nodes>
+    <nodes name="solid" domainType="TRG" incomingEdges="//@rules.0/@edges.2" outgoingEdges="//@rules.0/@edges.1">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Solid"/>
+    </nodes>
+    <nodes name="f" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1" outgoingEdges="//@rules.0/@edges.2" incomingCorrsTarget="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Facet"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="f2f" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.3">
+      <type href="platform:/resource/STLImportExport/model/STLImportExport.ecore#//FacetToFacet"/>
+    </nodes>
+    <edges name="s__facets__facet_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Solid/facets"/>
+    </edges>
+    <edges name="solid__facets__f_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Solid/facets"/>
+    </edges>
+    <edges name="f__solid__solid_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Facet/solid"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="SolidRule">
+    <nodes name="s" bindingType="CREATE" incomingCorrsSource="//@rules.1/@nodes.2">
+      <type href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Solid"/>
+    </nodes>
+    <nodes name="solid" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.1/@nodes.2">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Solid"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="s2s" domainType="CORR" bindingType="CREATE" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.1">
+      <type href="platform:/resource/STLImportExport/model/STLImportExport.ecore#//SolidToSolid"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="VectorRule">
+    <nacs name="noDoubleVector">
+      <nodes name="vector" domainType="TRG">
+        <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f"/>
+      </nodes>
+      <attributeConditionLibrary/>
+    </nacs>
+    <nodes name="vec" bindingType="CREATE" incomingCorrsSource="//@rules.2/@nodes.2">
+      <type href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector"/>
+    </nodes>
+    <nodes name="vector" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.2/@nodes.2">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f"/>
+      <attrExpr>
+        <attribute href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f/x"/>
+        <valueExpr xsi:type="language:TGGAttributeExpression" objectVar="//@rules.2/@nodes.0">
+          <attribute href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector/x1"/>
+        </valueExpr>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f/y"/>
+        <valueExpr xsi:type="language:TGGAttributeExpression" objectVar="//@rules.2/@nodes.0">
+          <attribute href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector/x2"/>
+        </valueExpr>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f/z"/>
+        <valueExpr xsi:type="language:TGGAttributeExpression" objectVar="//@rules.2/@nodes.0">
+          <attribute href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector/x3"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="v2v" domainType="CORR" bindingType="CREATE" source="//@rules.2/@nodes.0" target="//@rules.2/@nodes.1">
+      <type href="platform:/resource/STLImportExport/model/STLImportExport.ecore#//VectorToVector"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="VectorRule2">
+    <nodes name="vec" bindingType="CREATE" incomingCorrsSource="//@rules.3/@nodes.2">
+      <type href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector"/>
+    </nodes>
+    <nodes name="vector" domainType="TRG" incomingCorrsTarget="//@rules.3/@nodes.2">
+      <type href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="v2v2" domainType="CORR" bindingType="CREATE" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.1">
+      <type href="platform:/resource/STLImportExport/model/STLImportExport.ecore#//VectorToVector"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.0 //@rules.3/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.2 //@rules.3/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.4 //@rules.3/@attributeConditionLibrary/@parameterValues.5"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.0">
+        <attribute href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector/x1"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" objectVar="//@rules.3/@nodes.1">
+        <attribute href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f/x"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.0">
+        <attribute href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector/x2"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" objectVar="//@rules.3/@nodes.1">
+        <attribute href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f/y"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.0">
+        <attribute href="platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore#//Vector/x3"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" objectVar="//@rules.3/@nodes.1">
+        <attribute href="platform:/resource/Metamodell/model/Metamodell.ecore#//Vector3f/z"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="eq_float" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
+</language:TGG>

@@ -1,0 +1,32 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Solid:
+	'solid' 
+	name = ID
+	(facets+=Facet)+
+	'endsolid'
+	ID
+;
+
+Facet:
+    'facet' 
+    normal=Normalvector 
+    'outer' 'loop' 
+    v1=Vector v2=Vector v3=Vector
+    'endloop' 
+    'endfacet' 
+;
+
+Vector:
+    'vertex' x1 = FLOAT x2 = FLOAT x3 = FLOAT  ;
+    
+    
+Normalvector :
+	'normal' x1 = FLOAT x2 = FLOAT x3 = FLOAT ; 
+	
+
+terminal FLOAT returns ecore::EFloat:
+	('-' | '.' | 'e' | INT )+ ;

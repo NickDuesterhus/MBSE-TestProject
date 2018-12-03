@@ -1,2 +1,1 @@
-# MBSE-TestProject
-MBSE-TestProject
+# MDE_Project

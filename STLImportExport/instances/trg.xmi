@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Metamodell="platform:/resource/Metamodell/model/Metamodell.ecore">
+  <Metamodell:Vector3f x="1.0" y="1.0" z="1.0"/>
+  <Metamodell:Vector3f/>
+  <Metamodell:Vector3f/>
+  <Metamodell:Solid>
+    <facets/>
+  </Metamodell:Solid>
+  <Metamodell:Vector3f x="1.0" y="1.0" z="1.0"/>
+</xmi:XMI>

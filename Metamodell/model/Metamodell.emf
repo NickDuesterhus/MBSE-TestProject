@@ -1,0 +1,20 @@
+@GenModel(documentation="TODO: Add documentation for Blup")
+@namespace(uri="platform:/resource/Metamodell/model/Metamodell.ecore", prefix="Metamodell")
+package Metamodell;
+
+class Solid {
+	attr EString name;
+	val Facet[*]#solid facets;
+}
+
+class Vector3f {
+	attr EFloat x;
+	attr EFloat y;
+	attr EFloat z;
+}
+
+class Facet {
+	val Vector3f normal;
+	
+	ref Solid [1]#facets solid;
+}

@@ -1,0 +1,25 @@
+#using STLImportExport.*
+#using AttrCondDefLibrary.*
+
+#rule SolidRule #with STLImportExport
+
+#source { 
+	++s:myDsl.Solid
+}
+
+#target {
+	++solid:Metamodell.Solid
+	
+}
+
+#correspondence {
+	++s2s:SolidToSolid{
+		#src->s
+		#trg->solid
+		
+	}
+}
+
+#attributeConditions {
+	
+}

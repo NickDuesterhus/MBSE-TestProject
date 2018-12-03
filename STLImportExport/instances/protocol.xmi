@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:STLImportExport="platform:/resource/STLImportExport/model/STLImportExport.ecore">
+  <STLImportExport:VectorRule__Marker final="true">
+    <CREATE__SRC__vec href="src.xmi#/0/@facets.0/@v1"/>
+    <CREATE__TRG__vector href="trg.xmi#/0"/>
+    <CREATE__CORR__v2v href="corr.xmi#/0"/>
+  </STLImportExport:VectorRule__Marker>
+  <STLImportExport:VectorRule__Marker final="true">
+    <CREATE__SRC__vec href="src.xmi#/0/@facets.0/@v2"/>
+    <CREATE__TRG__vector href="trg.xmi#/1"/>
+    <CREATE__CORR__v2v href="corr.xmi#/1"/>
+  </STLImportExport:VectorRule__Marker>
+  <STLImportExport:VectorRule__Marker final="true">
+    <CREATE__SRC__vec href="src.xmi#/0/@facets.0/@v3"/>
+    <CREATE__TRG__vector href="trg.xmi#/2"/>
+    <CREATE__CORR__v2v href="corr.xmi#/2"/>
+  </STLImportExport:VectorRule__Marker>
+  <STLImportExport:SolidRule__Marker final="true">
+    <CREATE__SRC__s href="src.xmi#/0"/>
+    <CREATE__TRG__solid href="trg.xmi#/3"/>
+    <CREATE__CORR__s2s href="corr.xmi#/3"/>
+  </STLImportExport:SolidRule__Marker>
+  <STLImportExport:FacetRule__Marker final="true">
+    <CREATE__SRC__facet href="src.xmi#/0/@facets.0"/>
+    <CONTEXT__SRC__s href="src.xmi#/0"/>
+    <CREATE__TRG__f href="trg.xmi#/3/@facets.0"/>
+    <CONTEXT__TRG__solid href="trg.xmi#/3"/>
+    <CREATE__CORR__f2f href="corr.xmi#/4"/>
+  </STLImportExport:FacetRule__Marker>
+  <STLImportExport:VectorRule__Marker final="true">
+    <CREATE__SRC__vec href="src.xmi#/1"/>
+    <CREATE__TRG__vector href="trg.xmi#/4"/>
+    <CREATE__CORR__v2v href="corr.xmi#/5"/>
+  </STLImportExport:VectorRule__Marker>
+</xmi:XMI>

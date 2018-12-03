@@ -1,0 +1,49 @@
+#using STLImportExport.*
+#using AttrCondDefLibrary.*
+
+#rule VectorRule #with STLImportExport
+
+#source { 
+	
+	++vec:myDsl.Vector{
+	
+	}
+	
+}
+
+#target {
+	
+	++vector:Metamodell.Vector3f{
+
+	}
+	
+}
+
+#correspondence {
+	
+	++v2v:VectorToVector{
+		#src->vec
+		#trg->vector
+	}
+	
+}
+
+#attributeConditions {
+ 	eq_float(vec.x1,vector.x)
+	eq_float(vec.x2,vector.y)
+	eq_float(vec.x3,vector.z)
+	
+}
+
+
+#nac noDoubleVector #for VectorRule 
+
+#target{
+	 vector:Metamodell.Vector3f{
+	  
+	  
+	}
+		
+		
+	
+}

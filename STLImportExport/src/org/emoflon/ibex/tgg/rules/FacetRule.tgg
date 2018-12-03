@@ -1,0 +1,36 @@
+#using STLImportExport.*
+#using AttrCondDefLibrary.*
+
+#rule FacetRule #with STLImportExport
+
+#source { 
+	
+	s:myDsl.Solid{	
+		++-facets->facet
+	}
+	
+	++facet:myDsl.Facet
+}
+
+#target {
+	
+	solid:Metamodell.Solid{
+		++-facets->f
+	}
+	
+	++f:Metamodell.Facet
+	
+}
+
+#correspondence {
+	
+	++f2f:FacetToFacet{
+		#src->facet
+		#trg->f
+	}
+	
+}
+
+#attributeConditions {
+	
+}

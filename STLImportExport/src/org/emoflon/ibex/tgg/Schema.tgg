@@ -1,0 +1,38 @@
+#import "platform:/resource/org.xtext.example.mydsl/model/generated/MyDsl.ecore"
+#import "platform:/resource/Metamodell/model/Metamodell.ecore"
+
+#schema STLImportExport
+	
+#source {
+	myDsl
+}
+
+#target { 
+	Metamodell
+} 
+
+#correspondence {
+	SolidToSolid {
+		#src->myDsl.Solid
+		#trg->Metamodell.Solid
+	}
+	
+	FacetToFacet{
+		#src->myDsl.Facet
+		#trg->Metamodell.Facet
+	}
+	
+	VectorToVector {
+		#src->myDsl.Vector
+		#trg->Metamodell.Vector3f
+	}
+	
+	NormalToNormal {
+		#src->myDsl.Normalvector
+		#trg->Metamodell.Vector3f
+	}
+}
+
+#attributeConditions {
+	
+}
